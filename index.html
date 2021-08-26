@@ -12,8 +12,8 @@
 
     <hr>
 
-    <h1>mst</h1>
-    <h2 id="mst"></h2>
+    <h1>mdt</h1>
+    <h2 id="mdt"></h2>
 
     <hr>
 
@@ -37,12 +37,12 @@
         }
         getPSTTime();
 
-        function getMSTTime() {
+        function getMSDTime() {
             let currentDate = new Date();
             let time = currentDate.getHours() - 1 + ":" + currentDate.getMinutes();
-            document.getElementById("mst").innerHTML = time;
+            document.getElementById("mdt").innerHTML = time;
 
-            setTimeout(getMSTTime, 1000);
+            setTimeout(getMSDTime, 1000);
         }
         getMSTTime();
 
