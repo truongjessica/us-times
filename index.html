@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>us times</title>
+</head>
+
+<body style="width: 90%; text-align: center; margin: 5% 5%">
+
+    <h1>pst</h1>
+    <h2 id="pst"></h2>
+
+    <hr>
+
+    <h1>mst</h1>
+    <h2 id="mst"></h2>
+
+    <hr>
+
+    <h1>cst</h1>
+    <h2 id="cst"></h2>
+
+    <hr>
+
+    <h1>est</h1>
+    <h2 id="est"></h2>
+
+    <hr>
+
+    <script>
+        function getPSTTime() {
+            let currentDate = new Date();
+            let time = currentDate.getHours() - 2 + ":" + currentDate.getMinutes();
+            document.getElementById("pst").innerHTML = time;
+
+            setTimeout(getPSTTime, 1000);
+        }
+        getPSTTime();
+
+        function getMSTTime() {
+            let currentDate = new Date();
+            let time = currentDate.getHours() - 1 + ":" + currentDate.getMinutes();
+            document.getElementById("mst").innerHTML = time;
+
+            setTimeout(getMSTTime, 1000);
+        }
+        getMSTTime();
+
+        function getCSTTime() {
+            let currentDate = new Date();
+            let time = currentDate.getHours() + ":" + currentDate.getMinutes();
+            document.getElementById("cst").innerHTML = time;
+
+            setTimeout(getCSTTime, 1000);
+        }
+        getCSTTime();
+
+        function getESTTime() {
+            let currentDate = new Date();
+            let time = currentDate.getHours() + 1 + ":" + currentDate.getMinutes();
+            document.getElementById("est").innerHTML = time;
+
+            setTimeout(getESTTime, 1000);
+        }
+        getESTTime();
+    </script>
+
+</body>
+
+</html>
